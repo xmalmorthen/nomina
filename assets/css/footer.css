@@ -1,0 +1,36 @@
+.footer {
+  height: 100px;
+  font-size: 0px;
+  color: #fff;
+  font-family: "Times New Roman";
+}
+.footer .verde {
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+  font-size: 18px;
+  background: #00b050;
+  vertical-align: top;
+  padding-left: 10px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.footer .gris {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  background: #808080;
+  vertical-align: top;
+}
+.footer .gris .escudo {
+  height: 100%;
+  float: right;
+  margin-right: 30px;
+}
+.footer .gris .texto {
+  display: inline-block;
+  text-align: right;
+  padding-left: 40px;
+}

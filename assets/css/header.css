@@ -1,0 +1,31 @@
+.header {
+  position: relative;
+  height: 130px;
+}
+.header .titulo {
+  font-family: "Times New Roman";
+  font-size: 30px;
+  color: #808080;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding-top: 46px;
+}
+.header .img-izq {
+  float: left;
+  height: 114px;
+}
+.header .img-der {
+  float: right;
+  height: 114px;
+}
+.header .divisor {
+  border-top: 2px solid;
+  border-bottom: 5px solid;
+  height: 2px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}

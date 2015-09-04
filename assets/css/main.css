@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial;
+}
+#contenedor {
+  width: 1200px;
+  margin: auto;
+  border: 1px solid;
+  height: 1000px;
+}
+.row {
+  display: block;
+  clear: both;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
