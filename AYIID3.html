@@ -8,13 +8,13 @@
 
 	<style type="text/css">
 		.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
-		.tg td{font-family:Arial, sans-serif;font-size:12px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+		.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 		.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-		.tg .tg-2thk{background-color:#c0c0c0;text-align:center}
-		.tg .tg-tkkh{background-color:#c0c0c0;text-align:right}
-		.tg .tg-hy62{background-color:#c0c0c0;text-align:left;}
-		.tg .tg-bsv2{background-color:#efefef; text-align:center;}
-		.tg .tg-031e{text-align:justify;}
+		.tg .tg-wr85{font-weight:bold;background-color:#efefef;text-align:center}
+		.tg .tg-yeb6{font-weight:bold;background-color:#efefef;text-align:right}
+		.tg .tg-ipa1{font-weight:bold;background-color:#c0c0c0;text-align:center}
+		.tg .tg-2sfh{font-weight:bold;background-color:#efefef;text-align:left}
+		.tg .tg-34fq{font-weight:bold;text-align:right}
 		@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}
 	</style>
 </head>
@@ -22,122 +22,103 @@
 	<div id="contenedor">			
 		<div class="header">
 			<img src="assets/imgs/logo.png" alt="" class="img-izq">
-		</div>
-		<div class="tg-wrap">
-			
-			<table class="tg">
+		</div>	
+		<div class="tg-wrap"
+			><table class="tg">
 			  <tr>
-				<th class="tg-tkkh">Formato </th>
-				<th class="tg-hy62" colspan="23">Personal Comisionado</th>
+				<th class="tg-yeb6">Formato</th>
+				<th class="tg-2sfh" colspan="23">Personal Comisionado</th>
 			  </tr>
 			  <tr>
-				<td class="tg-hy62" colspan="21">Elige un Fondo…</td>
-				<td class="tg-2thk" colspan="3">{@trimestre}</td>
+				<td class="tg-2sfh" colspan="22">Elige un Fondo…</td>
+				<td class="tg-wr85" colspan="2">{@trimestre}</td>
 			  </tr>
 			  <tr>
-				<td class="tg-2thk" rowspan="2">Entidad Federativa</td>
-				<td class="tg-2thk" rowspan="2">R.F.C.</td>
-				<td class="tg-2thk" rowspan="2">CURP</td>
-				<td class="tg-2thk" rowspan="2">Nombre</td>
-				<td class="tg-2thk" rowspan="2">Clave integrada</td>
-				<td class="tg-2thk" colspan="7">Clave Presupuestal</td>
-				<td class="tg-2thk" colspan="2">Fecha Comisión</td>
-				<td class="tg-2thk" rowspan="2">Percepciones pagadas en el Periodo de Comisión con Presupuesto Federal*</td>
-				<td class="tg-2thk" rowspan="2">Percepciones pagadas en el Periodo de Comisión con Presupuesto de otra fuente*</td>
-				<td class="tg-2thk" rowspan="2">Clave CT Origen</td>
-				<td class="tg-2thk" colspan="2">CT Destino dentro del sector</td>
-				<td class="tg-2thk" rowspan="2">Lugar de la comisión fuera del sector educativo</td>
-				<td class="tg-2thk" rowspan="2">Tipo de Comisión</td>
-				<td class="tg-2thk" rowspan="2">Función Específica</td>
-				<td class="tg-2thk" rowspan="2">Objeto de la comision</td>
-				<td class="tg-2thk" rowspan="2">No. Oficio</td>
+				<td class="tg-ipa1" rowspan="2">Entidad Federativa</td>
+				<td class="tg-ipa1" rowspan="2">R.F.C.</td>
+				<td class="tg-ipa1" rowspan="2">CURP</td>
+				<td class="tg-ipa1" rowspan="2">Nombre</td>
+				<td class="tg-ipa1" rowspan="2">Clave integrada</td>
+				<td class="tg-ipa1" colspan="7">Clave Presupuestal</td>
+				<td class="tg-ipa1" colspan="2">Fecha Comisión</td>
+				<td class="tg-ipa1">Percepciones pagadas en el Periodo de Comisión con Presupuesto Federal*</td>
+				<td class="tg-ipa1">Percepciones pagadas en el Periodo de Comisión con Presupuesto de otra fuente*</td>
+				<td class="tg-ipa1">Clave CT Origen</td>
+				<td class="tg-ipa1" colspan="2">CT Destino dentro del sector</td>
+				<td class="tg-ipa1">Lugar de la comisión fuera del sector educativo</td>
+				<td class="tg-ipa1">Tipo de Comisión</td>
+				<td class="tg-ipa1">Función Específica</td>
+				<td class="tg-ipa1">Objeto de la comision</td>
+				<td class="tg-ipa1">No. Oficio</td>
 			  </tr>
 			  <tr>
-				<td class="tg-2thk">Partida Presupuestal</td>
-				<td class="tg-2thk">Código de Pago</td>
-				<td class="tg-2thk">Clave de Unidad</td>
-				<td class="tg-2thk">Clave de Sub Unidad</td>
-				<td class="tg-2thk">Clave de Categoría</td>
-				<td class="tg-2thk">Horas Semana Mes</td>
-				<td class="tg-2thk">Número de Plaza</td>
-				<td class="tg-2thk">Inicio</td>
-				<td class="tg-2thk">Conclusión</td>
-				<td class="tg-2thk">Clave</td>
-				<td class="tg-2thk">Turno</td>
+				<td class="tg-ipa1">Partida Presupuestal</td>
+				<td class="tg-ipa1">Código de Pago</td>
+				<td class="tg-ipa1">Clave de Unidad</td>
+				<td class="tg-ipa1">Clave de Sub Unidad</td>
+				<td class="tg-ipa1">Clave de Categoría</td>
+				<td class="tg-ipa1">Horas Semana Mes</td>
+				<td class="tg-ipa1">Número de Plaza</td>
+				<td class="tg-ipa1">Inicio</td>
+				<td class="tg-ipa1">Conclusión</td>
+				<td class="tg-ipa1"></td>
+				<td class="tg-ipa1"></td>
+				<td class="tg-ipa1"></td>
+				<td class="tg-ipa1">Clave</td>
+				<td class="tg-ipa1">Turno</td>
+				<td class="tg-ipa1"></td>
+				<td class="tg-ipa1"></td>
+				<td class="tg-ipa1"></td>
+				<td class="tg-ipa1"></td>
+				<td class="tg-ipa1"></td>
 			  </tr>
 			  <tr>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
+				<td class="tg-031e">{@valor}</td>
 			  </tr>
 			  <tr>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-				<td class="tg-031e">{valor}</td>
-			  </tr>
-			  <tr>
-				<td class="tg-031e" colspan="2">Total Personas :</td>
-				<td class="tg-bsv2">{@totalPersonas}</td>
-				<td class="tg-031e" colspan="6"></td>
-				<td class="tg-031e" colspan="2">Total Plazas :</td>
-				<td class="tg-bsv2">{@totalPlazas}</td>
-				<td class="tg-031e" colspan="2">Total Pto. Federal :</td>
-				<td class="tg-bsv2">{@totalPtoFederal}</td>
-				<td class="tg-031e" colspan="9"></td>				
+				<td class="tg-34fq">Total Personas :</td>
+				<td class="tg-wr85">{@totalPersonas}</td>
+				<td class="tg-031e" colspan="7"></td>
+				<td class="tg-34fq" colspan="2">Total Plazas :</td>
+				<td class="tg-wr85">{@totalPlazas}</td>
+				<td class="tg-34fq" colspan="2">Total Pto. Federal :</td>
+				<td class="tg-wr85">{@totalPtoFederal}</td>
+				<td class="tg-031e" colspan="9"></td>
 			  </tr>
 			  <tr>
 				<td class="tg-031e" colspan="13"></td>
-				<td class="tg-031e" colspan="2">Total Ppto. Otras Fuentes :</td>
-				<td class="tg-bsv2">{@totalPtoOtrasFuentes}</td>
+				<td class="tg-34fq" colspan="2">Total Ppto. Otras Fuentes :</td>
+				<td class="tg-wr85">{@totalPtoOtrasFuentes}</td>
 				<td class="tg-031e" colspan="8"></td>
 			  </tr>
 			  <tr>
-				<td class="tg-031e" colspan="24" style="border-bottom: none!Important;">*Total de Percepciones reportadas por la Entidad Federativa como pagadas al trabajador durante la comisión.</td>
+				<td class="tg-031e" colspan="24">*Total de Percepciones reportadas por la Entidad Federativa como pagadas al trabajador durante la comisión.</td>
 			  </tr>
 			  <tr>
-				<td class="tg-031e" colspan="24" style="border-top: none!Important;">Fuente : Información proporcionada por las Entidades Federativas.</td>
+				<td class="tg-031e" colspan="24">Fuente : Información proporcionada por las Entidades Federativas.</td>
 			  </tr>
 			</table>
 		</div>
