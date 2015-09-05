@@ -7,6 +7,10 @@
 	<link rel="stylesheet" href="assets/css/header.css">
 
 	<style type="text/css">
+		.border-left {border-left: 1px solid!Important}
+		.border-right {border-right: 1px solid!Important}
+		.border-bottom {border-bottom:1px solid!Important}
+		.border-top {border-top: 1px solid}
 		.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
 		.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 		.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
@@ -15,7 +19,9 @@
 		.tg .tg-ipa1{font-weight:bold;background-color:#c0c0c0;text-align:center}
 		.tg .tg-k6pi{font-size:12px}
 		.tg .tg-2sfh{font-weight:bold;background-color:#efefef}
-		.tg .tg-34fq{font-weight:bold;text-align:right}
+		.footer .tg-34fq{font-weight:bold;text-align:right}
+		.footer .tg-wr85{font-weight:bold;background-color:#efefef;text-align:center}
+		.footer .tg-031e{border:none;}
 		@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}
 	</style>
 </head>
@@ -80,21 +86,21 @@
 				<td class="tg-k6pi">{@valor}</td>
 				<td class="tg-k6pi">{@valor}</td>
 			  </tr>
-			  <tr>
-				<td class="tg-34fq">Total Personas :</td>
+			  <tr class="footer">
+				<td class="tg-34fq border-left">Total Personas :</td>
 				<td class="tg-wr85">{@totalPersonas}</td>
 				<td class="tg-031e" colspan="6"></td>
 				<td class="tg-34fq" colspan="2">Total Plazas :</td>
 				<td class="tg-wr85">{@totalPlazas}</td>
 				<td class="tg-031e" colspan="2"></td>
 				<td class="tg-34fq" colspan="4">Total Percepciones Pagadas:</td>
-				<td class="tg-wr85">{@totalPercepcionesPagadas}</td>
+				<td class="tg-wr85 border-right">{@totalPercepcionesPagadas}</td>
 			  </tr>
-			  <tr>
-				<td class="tg-031e" colspan="18">*Total de Percepciones reportadas por la Entidad Federativa como pagadas en el periodo</td>
+			  <tr class="footer">
+				<td class="tg-031e border-left border-right" colspan="18">*Total de Percepciones reportadas por la Entidad Federativa como pagadas en el periodo</td>
 			  </tr>
-			  <tr>
-				<td class="tg-031e" colspan="18">Fuente : Información proporcionada por las Entidades Federativas</td>
+			  <tr class="footer">
+				<td class="tg-031e border-left border-right border-bottom" colspan="18">Fuente : Información proporcionada por las Entidades Federativas</td>
 			  </tr>
 			</table>
 		</div>
