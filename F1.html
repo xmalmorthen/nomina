@@ -2,10 +2,10 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-<!-- TODO: PARAMETRIZAR-->	<title>II D 2</title>
+<!-- TODO: PARAMETRIZAR-->	<title>F 1</title>
 	<link rel="stylesheet" href="assets/css/header.css">
 	
-	<style type="text/css">
+	<style type="text/css">		
 		.border-left {border-left: 1px solid!Important}
 		.border-right {border-right: 1px solid!Important}
 		.border-bottom {border-bottom:1px solid!Important}
@@ -17,7 +17,7 @@
 		.tg .tg-yeb6{font-weight:bold;background-color:#efefef;text-align:right}
 		.tg .tg-ipa1{font-weight:bold;background-color:#c0c0c0;text-align:center}
 		.tg .tg-k6pi{font-size:12px}
-		.tg .tg-2sfh{font-weight:bold;background-color:#efefef;text-align:left;}
+		.tg .tg-2sfh{font-weight:bold;background-color:#efefef;text-align:left}
 		.tg .tg-34fq{font-weight:bold;text-align:right}
 		.footer .tg-34fq{font-weight:bold;text-align:right;border:none;}
 		.footer .tg-wr85{font-weight:bold;background-color:#efefef;text-align:center;border:none;}
@@ -27,15 +27,15 @@
 	</style>
 </head>
 <body>
-	<div id="contenedor">			
+	<div id="contenedor">
 		<div class="header">
 			<img src="assets/imgs/logo.png" alt="" class="img-izq">
-		</div>
+		</div>				
 		<div class="tg-wrap">
 			<table class="tg">
 			  <tr>
 				<th class="tg-yeb6">Formato</th>
-				<th class="tg-2sfh" colspan="17">Movimientos de Plazas</th>
+				<th class="tg-2sfh" colspan="17">Trabajadores con Doble Asignación Salarial en Municipios no Colindantes Geográficamente</th>
 			  </tr>
 			  <tr>
 				<td class="tg-2sfh" colspan="16">Elige un Fondo…</td>
@@ -43,17 +43,16 @@
 			  </tr>
 			  <tr>
 				<td class="tg-ipa1" rowspan="2">Entidad Federativa</td>
+				<td class="tg-ipa1" rowspan="2">Municipio</td>
+				<td class="tg-ipa1" rowspan="2">Localidad</td>
 				<td class="tg-ipa1" rowspan="2">RFC</td>
 				<td class="tg-ipa1" rowspan="2">CURP</td>
-				<td class="tg-ipa1" rowspan="2">Nombre</td>
-				<td class="tg-ipa1" rowspan="2">Origen Presupuestal de la plazas</td>
+				<td class="tg-ipa1" rowspan="2">Nombre del Trabajador</td>
+				<td class="tg-ipa1" rowspan="2">Clave integrada</td>
 				<td class="tg-ipa1" colspan="7">Clave Presupuestal</td>
-				<td class="tg-ipa1" rowspan="2">Clave de nivel de puesto</td>
-				<td class="tg-ipa1" rowspan="2">Clave de nivel de sueldo</td>
-				<td class="tg-ipa1" rowspan="2">Zona Económica</td>
-				<td class="tg-ipa1" rowspan="2">Tipo de movimiento</td>
-				<td class="tg-ipa1" rowspan="2">Quincena Inicial</td>
-				<td class="tg-ipa1" rowspan="2">Quincena Final</td>
+				<td class="tg-ipa1" rowspan="2">Clave CT</td>
+				<td class="tg-ipa1" rowspan="2">Nombre CT</td>
+				<td class="tg-ipa1" colspan="2">Periodo en el CT</td>
 			  </tr>
 			  <tr>
 				<td class="tg-ipa1">Partida Presupuestal</td>
@@ -63,9 +62,11 @@
 				<td class="tg-ipa1">Clave de Categoría</td>
 				<td class="tg-ipa1">Horas Semana Mes</td>
 				<td class="tg-ipa1">Número de Plaza</td>
+				<td class="tg-ipa1">Desde</td>
+				<td class="tg-ipa1">Hasta</td>
 			  </tr>
 			  <tr>
-				<td class="tg-k6pi">{@valor}<br></td>
+				<td class="tg-k6pi">{@valor}</td>
 				<td class="tg-k6pi">{@valor}</td>
 				<td class="tg-k6pi">{@valor}</td>
 				<td class="tg-k6pi">{@valor}</td>
@@ -85,26 +86,18 @@
 				<td class="tg-k6pi">{@valor}</td>
 			  </tr>
 			  <tr class="footer">
-				<td class="tg-34fq border-left">Total Personas :</td>
+				<td class="tg-34fq border-left" colspan="3">Total Personas :</td>
 				<td class="tg-wr85">{@totalPersonas}</td>
-				<td class="tg-031e"></td>
-				<td class="tg-031e"></td>
-				<td class="tg-031e"></td>
-				<td class="tg-031e"></td>
-				<td class="tg-031e"></td>
-				<td class="tg-031e"></td>
-				<td class="tg-031e"></td>
+				<td class="tg-031e" colspan="7"></td>
 				<td class="tg-34fq" colspan="2">Total Plazas :</td>
-				<td class="tg-wr85">{@totalPlazas}</td>
-				<td class="tg-031e"></td>
-				<td class="tg-031e"></td>
-				<td class="tg-031e"></td>
-				<td class="tg-031e"></td>
-				<td class="tg-031e"></td>
-				<td class="tg-031e border-right"></td>
+				<td class="tg-hgcj">{@totalPlazas}</td>
+				<td class="tg-031e border-right" colspan="4"></td>
 			  </tr>
 			  <tr class="footer border-top">
-				<td class="tg-031e border-bottom border-left border-right" colspan="18"><strong>Fuente :</strong> Información proporcionada por las Entidades Federativas</td>
+				<td class="tg-031e border-left border-right" colspan="18"><strong>Fuente :</strong> Información proporcionada por las Entidades Federativas</td>
+			  </tr>
+			  <tr class="footer">
+				<td class="tg-031e border-bottom border-left border-right" colspan="18">Importante: Listar Sólo los Municipios no Colindantes</td>
 			  </tr>
 			</table>
 		</div>
