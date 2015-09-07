@@ -1,12 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-<!-- TODO: PARAMETRIZAR-->	<title>B</title>
-
+<!-- TODO: PARAMETRIZAR-->	<title>II D 6</title>
 	<link rel="stylesheet" href="assets/css/header.css">
-
-	<style type="text/css">
+	
+	<style type="text/css">		
 		.border-left {border-left: 1px solid!Important}
 		.border-right {border-right: 1px solid!Important}
 		.border-bottom {border-bottom:1px solid!Important}
@@ -18,51 +17,48 @@
 		.tg .tg-yeb6{font-weight:bold;background-color:#efefef;text-align:right}
 		.tg .tg-ipa1{font-weight:bold;background-color:#c0c0c0;text-align:center}
 		.tg .tg-k6pi{font-size:12px}
-		.tg .tg-2sfh{font-weight:bold;background-color:#efefef;text-align:left}
+		.tg .tg-2sfh{font-weight:bold;background-color:#efefef;text-align:left;}
+		.tg .tg-34fq{font-weight:bold;text-align:right}
 		.footer .tg-34fq{font-weight:bold;text-align:right;border:none;}
 		.footer .tg-wr85{font-weight:bold;background-color:#efefef;text-align:center;border:none;}
 		.footer .tg-031e{border:none;}
+		.footer .tg-hgcj{font-weight:bold;background-color:#efefef;text-align:center;border:none;}
 		@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}
 	</style>
+	
 </head>
 <body>
 	<div id="contenedor">			
 		<div class="header">
 			<img src="assets/imgs/logo.png" alt="" class="img-izq">
-		</div>
+		</div>						
 		<div class="tg-wrap">
 			<table class="tg">
 			  <tr>
 				<th class="tg-yeb6">Formato</th>
-				<th class="tg-2sfh" colspan="17">Registro Federal de Contribuyentes de Trabajadores con Pagos Retroactivos con un Periodo Mayor a 45 días</th>
+				<th class="tg-2sfh" colspan="11">Trabajadores Contratados por Honorarios en el Periodo</th>
 			  </tr>
 			  <tr>
-				<td class="tg-2sfh" colspan="16">Elige un Fondo…</td>
+				<td class="tg-2sfh" colspan="10">Elige un Fondo…</td>
 				<td class="tg-wr85" colspan="2">{@trimestre}</td>
 			  </tr>
 			  <tr>
 				<td class="tg-ipa1" rowspan="2">Entidad Federativa</td>
-				<td class="tg-ipa1" rowspan="2">RFC</td>
+				<td class="tg-ipa1" rowspan="2">Clave Centro de Trabajo</td>
+				<td class="tg-ipa1" rowspan="2">R.F.C.</td>
 				<td class="tg-ipa1" rowspan="2">CURP</td>
 				<td class="tg-ipa1" rowspan="2">Nombre</td>
-				<td class="tg-ipa1" colspan="7">Clave Presupuestal</td>
-				<td class="tg-ipa1" rowspan="2">Clave de Centro de Trabajo</td>
-				<td class="tg-ipa1" rowspan="2">Fecha de emisión de pago</td>
-				<td class="tg-ipa1" rowspan="2">Motivo del Pago Retroactivo</td>
-				<td class="tg-ipa1" colspan="2">Periodo pagado</td>
-				<td class="tg-ipa1" rowspan="2">Días transcurridos para el pago</td>
-				<td class="tg-ipa1" rowspan="2">Percepciones pagadas en el periodo reportado *</td>
+				<td class="tg-ipa1" rowspan="2">Identificador del Contrato</td>
+				<td class="tg-ipa1" colspan="2">Equivalencia</td>
+				<td class="tg-ipa1" colspan="2">Periodo de Contratación</td>
+				<td class="tg-ipa1" rowspan="2">Función</td>
+				<td class="tg-ipa1" rowspan="2">Percepciones pagadas dentro del periodo reportado</td>
 			  </tr>
 			  <tr>
-				<td class="tg-ipa1">Partida Presupuestal</td>
-				<td class="tg-ipa1">Código de Pago</td>
-				<td class="tg-ipa1">Clave de Unidad</td>
-				<td class="tg-ipa1">Clave de Sub Unidad</td>
 				<td class="tg-ipa1">Clave de Categoría</td>
 				<td class="tg-ipa1">Horas Semana Mes</td>
-				<td class="tg-ipa1">Número de Plaza</td>
-				<td class="tg-ipa1">Desde</td>
-				<td class="tg-ipa1">Hasta</td>
+				<td class="tg-ipa1">Inicio</td>
+				<td class="tg-ipa1">Conclusión</td>
 			  </tr>
 			  <tr>
 				<td class="tg-k6pi">{@valor}</td>
@@ -77,31 +73,27 @@
 				<td class="tg-k6pi">{@valor}</td>
 				<td class="tg-k6pi">{@valor}</td>
 				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
 			  </tr>
 			  <tr class="footer">
-				<td class="tg-34fq border-left">Total Personas :</td>
-				<td class="tg-wr85">{@totalPersonas}</td>
-				<td class="tg-031e" colspan="6"></td>
-				<td class="tg-34fq" colspan="2">Total Plazas :</td>
-				<td class="tg-wr85">{@totalPlazas}</td>
-				<td class="tg-031e" colspan="2"></td>
-				<td class="tg-34fq" colspan="4">Total Percepciones Pagadas:</td>
-				<td class="tg-wr85 border-right">{@totalPercepcionesPagadas}</td>
+				<td class="tg-34fq border-left " colspan="2">Total Entidad Federativa Personas :</td>
+				<td class="tg-wr85">{@totalEntidadFederativaPersonas}</td>
+				<td class="tg-031e" colspan="5"></td>
+				<td class="tg-34fq" colspan="3">Subtotal Monto Pagado en el Periodo:</td>
+				<td class="tg-wr85 border-right">{@subtotalMontoPagadoenelPeriodo}</td>
+			  </tr>
+			  <tr class="footer">
+				<td class="tg-031e border-left " colspan="8"></td>
+				<td class="tg-34fq" colspan="2">Total   Percepciones :</td>
+				<td class="tg-wr85">{@totalPercepciones}</td>
+				<td class="tg-031e border-right"></td>
 			  </tr>
 			  <tr class="footer border-top">
-				<td class="tg-031e border-left border-right" colspan="18">*Total de Percepciones reportadas por la Entidad Federativa como pagadas en el periodo</td>
-			  </tr>
-			  <tr class="footer">
-				<td class="tg-031e border-left border-right border-bottom" colspan="18"><strong>Fuente :</strong> Información proporcionada por las Entidades Federativas</td>
+				<td class="tg-031e border-bottom border-left border-right" colspan="12">Fuente : Información proporcionada por las Entidades Federativas</td>
 			  </tr>
 			</table>
 		</div>
 	</div>
 </body>
 </html>
+
+
