@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+<!-- TODO: PARAMETRIZAR-->	<title>II B Y 1</title>
+	<link rel="stylesheet" href="assets/css/header.css">
+	
+	<style type="text/css">
+		.border-left {border-left: 1px solid!Important}
+		.border-right {border-right: 1px solid!Important}
+		.border-bottom {border-bottom:1px solid!Important}
+		.border-top {border-top: 1px solid}
+		.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+		.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+		.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+		.tg .tg-wr85{font-weight:bold;background-color:#efefef;text-align:center}
+		.tg .tg-yeb6{font-weight:bold;background-color:#efefef;text-align:right}
+		.tg .tg-ipa1{font-weight:bold;background-color:#c0c0c0;text-align:center}
+		.tg .tg-k6pi{font-size:12px}
+		.tg .tg-2sfh{font-weight:bold;background-color:#efefef;text-align:left;}
+		.tg .tg-34fq{font-weight:bold;text-align:right}
+		.footer .tg-34fq{font-weight:bold;text-align:right;border:none;}
+		.footer .tg-wr85{font-weight:bold;background-color:#efefef;text-align:center;border:none;}
+		.footer .tg-031e{border:none;}
+		.footer .tg-hgcj{font-weight:bold;background-color:#efefef;text-align:center;border:none;}
+		@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}
+	</style>
+</head>
+<body>
+	<div id="contenedor">			
+		<div class="header">
+			<img src="assets/imgs/logo.png" alt="" class="img-izq">
+		</div>
+		<div class="tg-wrap">
+			<table class="tg">
+			  <tr>
+				<th class="tg-yeb6">Formato</th>
+				<th class="tg-2sfh" colspan="17">Movimientos de Plazas</th>
+			  </tr>
+			  <tr>
+				<td class="tg-2sfh" colspan="16">Elige un Fondo…</td>
+				<td class="tg-wr85" colspan="2">{@trimestre}</td>
+			  </tr>
+			  <tr>
+				<td class="tg-ipa1" rowspan="2">Entidad Federativa</td>
+				<td class="tg-ipa1" rowspan="2">RFC</td>
+				<td class="tg-ipa1" rowspan="2">CURP</td>
+				<td class="tg-ipa1" rowspan="2">Nombre</td>
+				<td class="tg-ipa1" rowspan="2">Origen Presupuestal de la plazas</td>
+				<td class="tg-ipa1" colspan="7">Clave Presupuestal</td>
+				<td class="tg-ipa1" rowspan="2">Clave de nivel de puesto</td>
+				<td class="tg-ipa1" rowspan="2">Clave de nivel de sueldo</td>
+				<td class="tg-ipa1" rowspan="2">Zona Económica</td>
+				<td class="tg-ipa1" rowspan="2">Tipo de movimiento</td>
+				<td class="tg-ipa1" rowspan="2">Quincena Inicial</td>
+				<td class="tg-ipa1" rowspan="2">Quincena Final</td>
+			  </tr>
+			  <tr>
+				<td class="tg-ipa1">Partida Presupuestal</td>
+				<td class="tg-ipa1">Código de Pago</td>
+				<td class="tg-ipa1">Clave de Unidad</td>
+				<td class="tg-ipa1">Clave de Sub Unidad</td>
+				<td class="tg-ipa1">Clave de Categoría</td>
+				<td class="tg-ipa1">Horas Semana Mes</td>
+				<td class="tg-ipa1">Número de Plaza</td>
+			  </tr>
+			  <tr>
+				<td class="tg-k6pi">{@valor}<br></td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+				<td class="tg-k6pi">{@valor}</td>
+			  </tr>
+			  <tr class="footer">
+				<td class="tg-34fq border-left">Total Personas :</td>
+				<td class="tg-wr85">{@totalPersonas}</td>
+				<td class="tg-031e"></td>
+				<td class="tg-031e"></td>
+				<td class="tg-031e"></td>
+				<td class="tg-031e"></td>
+				<td class="tg-031e"></td>
+				<td class="tg-031e"></td>
+				<td class="tg-031e"></td>
+				<td class="tg-34fq" colspan="2">Total Plazas :</td>
+				<td class="tg-wr85">{@totalPlazas}</td>
+				<td class="tg-031e"></td>
+				<td class="tg-031e"></td>
+				<td class="tg-031e"></td>
+				<td class="tg-031e"></td>
+				<td class="tg-031e"></td>
+				<td class="tg-031e border-right"></td>
+			  </tr>
+			  <tr class="footer">
+				<td class="tg-031e border-bottom border-left border-right" colspan="18">Fuente: Información proporcionada por las Entidades Federativas</td>
+			  </tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
+
+
