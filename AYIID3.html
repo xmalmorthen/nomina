@@ -1,124 +1,140 @@
 ﻿<!DOCTYPE html>
-<html lang="es">
+<html ng-app="baseApp" ng-controller="baseController" lang="es">
 <head>
-	<meta charset="UTF-8">
-<!-- TODO: PARAMETRIZAR-->	<title>A Y II D3</title>
-	<link rel="stylesheet" href="assets/css/header.css">
-	<style type="text/css">
-		.border-left {border-left: 1px solid!Important}
-		.border-right {border-right: 1px solid!Important}
-		.border-bottom {border-bottom:1px solid!Important}
-		.border-top {border-top: 1px solid!Important}
-		.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
-		.tg td{font-family:Arial, sans-serif;font-size:14px;padding:5px 10px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-		.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:5px 10px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-		.tg .tg-wr85{font-weight:bold;background-color:#efefef;text-align:center}
-		.tg .tg-yeb6{font-weight:bold;background-color:#efefef;text-align:right}
-		.tg .tg-ipa1{font-weight:bold;background-color:#c0c0c0;text-align:center}
-		.tg .tg-k6pi{font-size:12px}
-		.tg .tg-2sfh{font-weight:bold;background-color:#efefef;text-align:left;}
-		.footer .tg-34fq{font-weight:bold;text-align:right;border:none;}
-		.footer .tg-wr85{font-weight:bold;background-color:#efefef;text-align:center;border:none;}
-		.footer .tg-031e{border:none;}
-		@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}
-	</style>
+    <meta charset="UTF-8">
+    <title>{{data.Title}}</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <style type="text/css">
+            .border-left {border-left: 1px solid!Important}
+            .border-right {border-right: 1px solid!Important}
+            .border-bottom {border-bottom:1px solid!Important}
+            .border-top {border-top: 1px solid!Important}
+            .tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+            .tg td{font-family:Arial, sans-serif;font-size:14px;padding:5px 10px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+            .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:5px 10px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+            .tg .tg-wr85{font-weight:bold;background-color:#efefef;text-align:center}
+            .tg .tg-yeb6{font-weight:bold;background-color:#efefef;text-align:right}
+            .tg .tg-ipa1{font-weight:bold;background-color:#c0c0c0;text-align:center}
+            .tg .tg-k6pi{font-size:12px}
+            .tg .tg-2sfh{font-weight:bold;background-color:#efefef;text-align:left;}
+            .footer .tg-34fq{font-weight:bold;text-align:right;border:none;}
+            .footer .tg-wr85{font-weight:bold;background-color:#efefef;text-align:center;border:none;}
+            .footer .tg-031e{border:none;}
+            @media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}
+    </style>
+
+    <script type="text/javascript">
+        angular.module("baseApp",[])
+            .controller("baseController",function($scope, $http){
+                $scope.data = [];
+                $http({
+                    method : 'GET',
+                    url : 'http://localhost:4447/apiV1/AYIID3', 
+                    headers: { 'Accept':'application/json'}
+                })
+                .success(function(data, status) {
+                    $scope.data = data;
+                })
+                .error(function(data, status) {
+                    alert("Error al obtener la información!!!");
+                });
+            });                
+    </script>        
 </head>
-<body>
-	<div id="contenedor">			
-		<div class="header">
-			<img src="assets/imgs/logo.png" alt="" class="img-izq">
-		</div>
-		<div class="tg-wrap">
-			<table class="tg">
-			  <tr>
-				<th class="tg-yeb6">Formato</th>
-				<th class="tg-2sfh" colspan="23">Personal Comisionado</th>
-			  </tr>
-			  <tr>
-				<td class="tg-2sfh" colspan="22">Elige un Fondo…</td>
-				<td class="tg-wr85" colspan="2">{@trimestre}</td>
-			  </tr>
-			  <tr>
-				<td class="tg-ipa1" rowspan="2">Entidad Federativa</td>
-				<td class="tg-ipa1" rowspan="2">R.F.C.</td>
-				<td class="tg-ipa1" rowspan="2">CURP</td>
-				<td class="tg-ipa1" rowspan="2">Nombre</td>
-				<td class="tg-ipa1" rowspan="2">Clave integrada</td>
-				<td class="tg-ipa1" colspan="7">Clave Presupuestal</td>
-				<td class="tg-ipa1" colspan="2">Fecha Comisión</td>
-				<td class="tg-ipa1" rowspan="2">Percepciones pagadas en el Periodo de Comisión con Presupuesto Federal*</td>
-				<td class="tg-ipa1" rowspan="2">Percepciones pagadas en el Periodo de Comisión con Presupuesto de otra fuente*</td>
-				<td class="tg-ipa1" rowspan="2">Clave CT Origen</td>
-				<td class="tg-ipa1" colspan="2">CT Destino dentro del sector</td>
-				<td class="tg-ipa1" rowspan="2">Lugar de la comisión fuera del sector educativo</td>
-				<td class="tg-ipa1" rowspan="2">Tipo de Comisión</td>
-				<td class="tg-ipa1" rowspan="2">Función Específica</td>
-				<td class="tg-ipa1" rowspan="2">Objeto de la comision</td>
-				<td class="tg-ipa1" rowspan="2">No. Oficio</td>
-			  </tr>
-			  <tr>
-				<td class="tg-ipa1">Partida Presupuestal</td>
-				<td class="tg-ipa1">Código de Pago</td>
-				<td class="tg-ipa1">Clave de Unidad</td>
-				<td class="tg-ipa1">Clave de Sub Unidad</td>
-				<td class="tg-ipa1">Clave de Categoría</td>
-				<td class="tg-ipa1">Horas Semana Mes</td>
-				<td class="tg-ipa1">Número de Plaza</td>
-				<td class="tg-ipa1">Inicio</td>
-				<td class="tg-ipa1">Conclusión</td>
-				<td class="tg-ipa1">Clave</td>
-				<td class="tg-ipa1">Turno</td>
-			  </tr>
-			  <tr>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-				<td class="tg-k6pi">{@valor}</td>
-			  </tr>
-			  <tr class="footer">
-				<td class="tg-34fq border-left">Total Personas :</td>
-				<td class="tg-wr85">{@totalPersonas}</td>
-				<td class="tg-031e" colspan="7"></td>
-				<td class="tg-34fq" colspan="2">Total Plazas :</td>
-				<td class="tg-wr85">{@totalPlazas}</td>
-				<td class="tg-34fq" colspan="2">Total Pto. Federal :</td>
-				<td class="tg-wr85">{@totalPtoFederal}</td>
-				<td class="tg-031e border-right" colspan="9"></td>
-			  </tr>
-			  <tr class="footer">
-				<td class="tg-031e border-left" colspan="13"></td>
-				<td class="tg-34fq" colspan="2">Total Ppto. Otras Fuentes :</td>
-				<td class="tg-wr85">{@totalPtoOtrasFuentes}</td>
-				<td class="tg-031e border-right" colspan="8"></td>
-			  </tr>
-			  <tr class="footer border-top">
-				<td class="tg-031e border-left border-right" colspan="24">*Total de Percepciones reportadas por la Entidad Federativa como pagadas al trabajador durante la comisión.</td>
-			  </tr class="footer">
-			  <tr class="footer">
-				<td class="tg-031e border-left border-right border-bottom" colspan="24"><strong>Fuente :</strong> Información proporcionada por las Entidades Federativas.</td>
-			  </tr>
-			</table>
-		</div>
-	</div>
+<body>    
+    <div>
+        <img src="assets/imgs/logo.png" alt="" class="img-izq">
+    </div>
+    <div class="tg-wrap">
+        <table class="tg">
+          <tr>
+            <th class="tg-yeb6">Formato</th>
+            <th class="tg-2sfh" colspan="23">Personal Comisionado</th>
+          </tr>
+          <tr>
+            <td class="tg-2sfh" colspan="22">Elige un Fondo…</td>
+            <td class="tg-wr85" colspan="2">{{data.Trimestre}}</td>
+          </tr>
+          <tr>
+            <td class="tg-ipa1" rowspan="2">Entidad Federativa</td>
+            <td class="tg-ipa1" rowspan="2">R.F.C.</td>
+            <td class="tg-ipa1" rowspan="2">CURP</td>
+            <td class="tg-ipa1" rowspan="2">Nombre</td>
+            <td class="tg-ipa1" rowspan="2">Clave integrada</td>
+            <td class="tg-ipa1" colspan="7">Clave Presupuestal</td>
+            <td class="tg-ipa1" colspan="2">Fecha Comisión</td>
+            <td class="tg-ipa1" rowspan="2">Percepciones pagadas en el Periodo de Comisión con Presupuesto Federal*</td>
+            <td class="tg-ipa1" rowspan="2">Percepciones pagadas en el Periodo de Comisión con Presupuesto de otra fuente*</td>
+            <td class="tg-ipa1" rowspan="2">Clave CT Origen</td>
+            <td class="tg-ipa1" colspan="2">CT Destino dentro del sector</td>
+            <td class="tg-ipa1" rowspan="2">Lugar de la comisión fuera del sector educativo</td>
+            <td class="tg-ipa1" rowspan="2">Tipo de Comisión</td>
+            <td class="tg-ipa1" rowspan="2">Función Específica</td>
+            <td class="tg-ipa1" rowspan="2">Objeto de la comision</td>
+            <td class="tg-ipa1" rowspan="2">No. Oficio</td>
+          </tr>
+          <tr>
+            <td class="tg-ipa1">Partida Presupuestal</td>
+            <td class="tg-ipa1">Código de Pago</td>
+            <td class="tg-ipa1">Clave de Unidad</td>
+            <td class="tg-ipa1">Clave de Sub Unidad</td>
+            <td class="tg-ipa1">Clave de Categoría</td>
+            <td class="tg-ipa1">Horas Semana Mes</td>
+            <td class="tg-ipa1">Número de Plaza</td>
+            <td class="tg-ipa1">Inicio</td>
+            <td class="tg-ipa1">Conclusión</td>
+            <td class="tg-ipa1">Clave</td>
+            <td class="tg-ipa1">Turno</td>
+          </tr>
+          <tr ng-repeat="item in data.Registros">
+            <td class="tg-k6pi" >{{item.EntidadFederativa}}</td>
+            <td class="tg-k6pi">{{item.RFC}}</td>
+            <td class="tg-k6pi">{{item.CURP}}</td>
+            <td class="tg-k6pi">{{item.Nombre}}</td>
+            <td class="tg-k6pi">{{item.ClaveIntegrada}}</td>
+            <td class="tg-k6pi">{{item.ClavePresupuestal.PartidaPresupuestal}}</td>
+            <td class="tg-k6pi">{{item.ClavePresupuestal.CodigodePago}}</td>
+            <td class="tg-k6pi">{{item.ClavePresupuestal.ClavedeUnidad}}</td>
+            <td class="tg-k6pi">{{item.ClavePresupuestal.ClavedeSubUnidad}}</td>
+            <td class="tg-k6pi">{{item.ClavePresupuestal.ClavedeCategoria}}</td>
+            <td class="tg-k6pi">{{item.ClavePresupuestal.HorasSemanaMes}}</td>
+            <td class="tg-k6pi">{{item.ClavePresupuestal.NumerodePlaza}}</td>
+            <td class="tg-k6pi">{{item.FechaComision.Inicio}}</td>
+            <td class="tg-k6pi">{{item.FechaComision.Conclusion}}</td>
+            <td class="tg-k6pi">{{item.PercepcionesPagadasenelPeriododeComisionconPresupuestoFederal}}</td>
+            <td class="tg-k6pi">{{item.PercepcionesPagadasenelPeriododeComisionconPresupuestodeOtraFuente}}</td>
+            <td class="tg-k6pi">{{item.ClaveCTOrigen}}</td>
+            <td class="tg-k6pi">{{item.CTDestinoDentrodelSector.Clave}}</td>
+            <td class="tg-k6pi">{{item.CTDestinoDentrodelSector.Turno}}</td>
+            <td class="tg-k6pi">{{item.LugardelaComisionFueradelSectorEducativo}}</td>
+            <td class="tg-k6pi">{{item.TipodeComision}}</td>
+            <td class="tg-k6pi">{{item.FuncionEspecifica}}</td>
+            <td class="tg-k6pi">{{item.ObjetodelaComision}}</td>
+            <td class="tg-k6pi">{{item.NoOficio}}</td>
+          </tr>
+          <tr class="footer">
+                <td class="tg-34fq border-left">Total Personas :</td>
+                <td class="tg-wr85">{{data.TotalPersonas}}</td>
+                <td class="tg-031e" colspan="7"></td>
+                <td class="tg-34fq" colspan="2">Total Plazas :</td>
+                <td class="tg-wr85">{{data.TotalPlazas}}</td>
+                <td class="tg-34fq" colspan="2">Total Pto. Federal :</td>
+                <td class="tg-wr85">{{data.TotalPtoFederal}}</td>
+                <td class="tg-031e border-right" colspan="9"></td>
+          </tr>
+          <tr class="footer">
+                <td class="tg-031e border-left" colspan="13"></td>
+                <td class="tg-34fq" colspan="2">Total Ppto. Otras Fuentes :</td>
+                <td class="tg-wr85">{{data.TotalPtoOtrasFuentes}}</td>
+                <td class="tg-031e border-right" colspan="8"></td>
+          </tr>
+          <tr class="footer border-top">
+                <td class="tg-031e border-left border-right" colspan="24">*Total de Percepciones reportadas por la Entidad Federativa como pagadas al trabajador durante la comisión.</td>
+          </tr>
+          <tr class="footer">
+                <td class="tg-031e border-left border-right border-bottom" colspan="24"><strong>Fuente :</strong> Información proporcionada por las Entidades Federativas.</td>
+          </tr>
+        </table>
+    </div>
 </body>
 </html>
